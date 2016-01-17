@@ -33,10 +33,7 @@ public class Logistic {
                 for (int j=0; j<weights.length; j++) {
                     weights[j] = weights[j] + rate * (label - predicted) * x[j];
                 }
-
-                lik += label * Math.log(classify(x)) + (1-label) * Math.log(1- classify(x));
             }
-            //System.out.println("iteration: " + n + " " + Arrays.toString(weights) + " mle: " + lik);
         }
     }
 
